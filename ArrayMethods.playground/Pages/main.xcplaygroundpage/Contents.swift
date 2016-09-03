@@ -15,8 +15,10 @@
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
 // write your code here
-
-
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+for day in daysOfTheWeek {
+    print("\(day)")
+}
 
 
 
@@ -26,7 +28,7 @@
  ### 2. Create an unchanging list for the five days of the week called 'numDaysOfTheWeek' and print each one by using a loop, prefixed by the position of the day of the week.
  */
 // write your code here
-
+var numDaysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 
 
@@ -39,8 +41,8 @@
 // write your code here
 
 
-
-
+var emptyArray: [String] = []
+print (emptyArray.isEmpty)
 
 
 
@@ -50,7 +52,8 @@
  */
 // write your code here
 
-
+var reverseEmptyArray: [String] = []
+print(!reverseEmptyArray.isEmpty)
 
 
 
@@ -63,7 +66,7 @@
  */
 // write your code here
 
-
+daysOfTheWeek.count
 
 
 
@@ -75,9 +78,12 @@
  */
 // write your code here
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
-
-
+for (index, day) in daysOfTheWeek.enumerate() {
+    print("\(index+1). \(day) ")
+}
 
 
 
@@ -87,18 +93,19 @@
 // write your code here
 
 
+var removed = daysOfTheWeek.removeAtIndex(6)
 
 
-
-
-
+daysOfTheWeek.insert(removed, atIndex: 0)
 
 /*: question8
  ### 8. Loop through the 'daysofTheWeek' array and change each value to lower case.
  */
 // write your code here
 
-
+for (index, day) in daysOfTheWeek.enumerate() {
+    print("\(day.lowercaseString)")
+}
 
 
 
@@ -110,9 +117,13 @@
  */
 // write your code here
 
+var justDays: [String] = []
+    if daysOfTheWeek.count > 5 {
+        daysOfTheWeek.removeAtIndex(0)
+        daysOfTheWeek.removeAtIndex(5)
+}
 
-
-
+print (daysOfTheWeek)
 
 
 //: Check here on the solution branch for a link to the solutions
